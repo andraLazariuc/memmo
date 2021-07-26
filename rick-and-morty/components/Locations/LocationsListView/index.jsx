@@ -9,7 +9,7 @@ import Pagination from "../../Pagination";
 
 const useStyles = makeStyles({
 	description: {
-		fontSize: 14,
+		fontSize: 34,
 	},
 	pos: {
 		margin: 20,
@@ -18,14 +18,6 @@ const useStyles = makeStyles({
 
 export default function Home() {
 	const classes = useStyles();
-
-	useEffect(() => {
-		// Remove the server-side injected CSS.
-		const jssStyles = document.querySelector("#jss-server-side");
-		if (jssStyles) {
-			jssStyles.parentElement.removeChild(jssStyles);
-		}
-	}, []);
 
 	const [locationFilters, setLocationFilters] = useState({
 		type: "",
@@ -91,12 +83,3 @@ export default function Home() {
 	);
 }
 
-// export async function getStaticProps(_context) {
-//   const { data } = await client.query({ query: GET_LOCATIONS_QUERY });
-
-//   return {
-//     props: {
-//       locationsData: data.locations,
-//     },
-//   };
-// }

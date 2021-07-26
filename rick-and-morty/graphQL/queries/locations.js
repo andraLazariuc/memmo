@@ -45,6 +45,7 @@ export const GET_LOCATION_BY_ID_QUERY = gql `
         name
         status
         species
+        image
         origin {
           id
         }
